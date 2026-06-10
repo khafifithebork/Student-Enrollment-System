@@ -7,4 +7,7 @@ import org.springframework.stereotype.Service;
 @Component
 public class StudentService {
 
+    public void enroll(String name,int age) {
+        System.out.println("Enrolling "+name+" "+age);
+    }
 }
