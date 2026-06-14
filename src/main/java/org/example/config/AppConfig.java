@@ -1,22 +1,24 @@
-package org.example;
+package org.example.config;
 
-import org.springframework.context.ApplicationContext;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan
+@ComponentScan("org.example")
+@Import(PersistenceConfig.class)
 public class AppConfig {
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource ds = new DriverManagerDataSource();
+        HikariDataSource ds = new HikariDataSource();
         ds.setDriverClassName("org.postgresql.Driver");
-        ds.setUrl("jdbc:postgresql://localhost:3306/test");
-        ds.setUsername("root");
+        ds.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
+        ds.setUsername("postgres");
         ds.setPassword("root");
         return ds;
     }
