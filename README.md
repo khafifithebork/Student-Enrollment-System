@@ -6,7 +6,6 @@
 ![Hibernate](https://img.shields.io/badge/Hibernate-6.x-59666C?logo=hibernate&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 A layered monolith built on plain **Spring Framework 6** (no Spring Boot) that manages student enrollment records. The project is intentionally built without auto-configuration, demonstrating manual IoC container bootstrapping, Hibernate ORM integration, declarative transaction management, and cross-cutting concerns via AspectJ AOP.
 
@@ -178,20 +177,3 @@ public class TestConfig {
 }
 ```
 
----
-
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "feat: description"`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a pull request.
-
-Please follow standard Java naming conventions and maintain constructor injection throughout. Do not introduce Spring Boot or any auto-configuration dependency.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
