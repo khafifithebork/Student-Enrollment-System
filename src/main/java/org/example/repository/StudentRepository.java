@@ -14,6 +14,6 @@ public class StudentRepository {
         this.sessionFactory = sessionFactory;
     }
     public void save(Student student) {
-        sessionFactory.getCurrentSession().save(student);
+        sessionFactory.getCurrentSession().persist(student);
     }
 }
