@@ -13,7 +13,7 @@ A layered monolith built on plain **Spring Framework 6** (no Spring Boot) that m
 
 ## Key Features
 
-- Manual `AnnotationConfigApplicationContext` bootstrapping — no `@SpringBootApplication`, no auto-wiring magic.
+- Manual `AnnotationConfigApplicationContext` bootstrapping — no `@SpringBootApplication`, no auto-wiring.
 - Java-based Spring configuration via `@Configuration`, `@ComponentScan`, and `@Import`.
 - Connection pooling with HikariCP and a manually declared `LocalSessionFactoryBean` bridging Spring and Hibernate.
 - Declarative transaction management using `@Transactional` backed by `HibernateTransactionManager`.
@@ -176,4 +176,3 @@ public class TestConfig {
     }
 }
 ```
-
